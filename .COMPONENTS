@@ -1,6 +1,7 @@
-cards/basic
-cards/article
-dropdowns/basic
-dropdowns/user
-lists/tagcloud
-topbars/user
+card/basic
+card/article
+dropdown/basic
+dropdown/user
+list/tagcloud
+topbar/user
+ad/l
