@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import AtomTag from '@schibstedspain/sui-atom-tag'
 import InputWrapper from '../../InputWrapper'
+import cx from 'classnames'
 
 const SEPARATION_KEY = ','
 
@@ -13,7 +14,8 @@ const AtomTagInput = (props) =>
 class TagInput extends React.Component {
   state = {
     tags: [],
-    inputValue: ''
+    inputValue: '',
+    isFocus: false,
   }
 
   get value () {
@@ -41,6 +43,14 @@ class TagInput extends React.Component {
     }, this.notifyChange)
   }
 
+  onFocus = (ev) => {
+    this.setState({isFocus: true})
+  }
+
+  onUnFocus = (ev) => {
+    this.setState({isFocus: false})
+  }
+
   onChange = (ev) => {
     const inputValue = ev.target.value
     if (this.shouldConvertIntoTag(inputValue)) {
@@ -58,7 +68,12 @@ class TagInput extends React.Component {
   render () {
     const {name} = this.props
     return (
-      <div className='sui-AtomInput-wrapper'>
+      <div className={cx(
+        'sui-AtomInput-wrapper',
+        {
+          focus: this.state.isFocus
+        }
+      )}>
         {
           this.state.tags.map((label, idx) =>
             <AtomTag
@@ -73,6 +88,8 @@ class TagInput extends React.Component {
           type='text'
           onChange={this.onChange}
           value={this.state.inputValue}
+          onSelect={this.onFocus}
+          onBlur={this.onUnFocus}
           {...this.props}
         />
       </div>

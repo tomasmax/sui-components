@@ -16,17 +16,25 @@
     padding-left: $p-l;
     padding-right: $p-l;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
     input {
       background: none;
       border: 0;
       float: left;
       margin-left: $m-s;
-      width: auto;
+      flex-grow: 1;
 
       &:focus {
         box-shadow: none;
+        border: 0;
+        outline: none !important;
       }
+    }
+
+    &.focus {
+      border: solid 1px $c-primary;
     }
   }
 }
