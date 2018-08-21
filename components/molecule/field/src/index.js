@@ -11,6 +11,10 @@ import AtomHelpText from '@s-ui/react-atom-help-text'
 const BASE_CLASS = 'sui-MoleculeField'
 
 class MoleculeField extends Component {
+  state = {
+    errorState: null
+  }
+
   getClassNames(inline) {
     return cx(BASE_CLASS, inline && `${BASE_CLASS}--inline`)
   }
@@ -31,6 +35,19 @@ class MoleculeField extends Component {
     if (this.props.successText) return this.props.successText
   }
 
+  _addErrorStateToChildren() {
+    const {children} = this.props
+    return React.Children.map(children, child =>
+      React.cloneElement(child, {errorState: this.state.errorState})
+    )
+  }
+
+  static getDerivedStateFromProps(props) {
+    if (props.errorText) return {errorState: true}
+    if (props.successText) return {errorState: false}
+    return {errorState: null}
+  }
+
   render() {
     const {
       label,
@@ -41,6 +58,7 @@ class MoleculeField extends Component {
       errorText,
       children // eslint-disable-line react/prop-types
     } = this.props
+
     return (
       <div className={this.getClassNames(inline)}>
         <AtomLabel
@@ -49,7 +67,7 @@ class MoleculeField extends Component {
           text={label}
         />
         <div>
-          {children}
+          {this._addErrorStateToChildren(children)}
           {(successText || errorText) && (
             <AtomValidationText
               type={this.getTypeValidation('validationText')}
@@ -82,7 +100,13 @@ MoleculeField.propTypes = {
   helpText: PropTypes.string,
 
   /** Boolean to decide if elements should be set inline */
-  inline: PropTypes.bool
+  inline: PropTypes.bool,
+
+  /**
+   * This component will set to its child the `errorState` prop which will be true, false or null
+   * depending if the field has errorText or successText set
+   */
+  children: PropTypes.node
 }
 
 export default MoleculeField
