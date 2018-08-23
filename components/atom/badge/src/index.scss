@@ -1,22 +1,13 @@
 @import '~@schibstedspain/sui-theme/lib/index';
 
-// $bdrs-atom-badge: $bdrs-m !default;
-// $fz-atom-badge-l: $fz-m !default;
-// $fz-atom-badge-s: $fz-xs !default;
-// $h-atom-badge-l: 24px !default;
-// $h-atom-badge-s: 16px !default;
-// $m-atom-badge-l: $m-m !default;
-// $m-atom-badge-s: $m-s !default;
-// $p-atom-badge: 0 $p-m !default;
-
-$bdrs-atom-badge: $bdrs-l !default;
-$fz-atom-badge-l: $fz-giant !default;
-$fz-atom-badge-s: $fz-xxs !default;
-$h-atom-badge-l: auto !default;
-$h-atom-badge-s: auto !default;
-$m-atom-badge-l: $m-giant !default;
+$bdrs-atom-badge: $bdrs-m !default;
+$fz-atom-badge-l: $fz-m !default;
+$fz-atom-badge-s: $fz-xs !default;
+$h-atom-badge-l: 24px !default;
+$h-atom-badge-s: 16px !default;
+$m-atom-badge-l: $m-m !default;
 $m-atom-badge-s: $m-s !default;
-$p-atom-badge: 0 $p-giant !default;
+$p-atom-badge: 0 $p-m !default;
 
 $badges: (
   success: (

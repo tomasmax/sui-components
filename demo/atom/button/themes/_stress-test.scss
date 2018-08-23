@@ -1,0 +1,17 @@
+
+@import '../../../../themes/motos';
+@import '~@schibstedspain/sui-theme/lib/index';
+
+$sz-atom-button-small: $p-base*4;
+$fz-atom-button-small: $fz-xxs;
+$icon-sz-atom-button-small: $sz-icon-s;
+$icon-m-atom-button-small: $m-s;
+$p-atom-button-small: $p-s;
+
+$sz-atom-button-large: $p-base*6;
+$fz-atom-button-large: $fz-giant;
+$icon-sz-atom-button-large: $sz-icon-xl;
+$icon-m-atom-button-large: $m-giant;
+$p-atom-button-large: $p-giant;
+
+@import '../../../../components/atom/button/src/index.scss';
