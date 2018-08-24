@@ -1,0 +1,19 @@
+@import '../../../../themes/motos';
+@import '~@schibstedspain/sui-theme/lib/index';
+
+// $bgc-atom-panel: color-variation($c-gray, -2) !default;
+// $bgc-panels: (
+//   'canvas': $c-white,
+//   'contrast': $c-black,
+//   'accent': $c-accent,
+//   'corporate': $c-primary,
+//   'base': color-variation($c-gray, 3),
+//   'dark': color-variation($c-gray, -1),
+//   'default': $c-gray-lightest,
+//   'highlight': color-variation($c-accent, 4)
+// ) !default;
+// $c-atom-panel: $c-black !default;
+// $horizontal-alignments-atom-panel: ('left', 'center', 'right') !default;
+// $vertical-alignments-atom-panel: ('top', 'center', 'bottom') !default;
+
+@import '../../../../components/atom/panel/src/index.scss';

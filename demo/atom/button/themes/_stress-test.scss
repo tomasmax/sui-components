@@ -1,6 +1,29 @@
 @import '../../../../themes/motos';
 @import '~@schibstedspain/sui-theme/lib/index';
 
+// $bgc-atom-button: $c-primary !default;
+// $bgc-atom-button-light: color-variation($bgc-atom-button, 4) !default;
+// $bgc-atom-button-dark: color-variation($bgc-atom-button, -1) !default;
+// $bgc-atom-button-light-contrast: color-variation($bgc-atom-button, 3) !default;
+
+// $sz-atom-button-small: $p-base*4 !default;
+// $fz-atom-button-small: $fz-s !default;
+// $icon-sz-atom-button-small: $sz-icon-s !default;
+// $icon-m-atom-button-small: $m-s !default;
+// $p-atom-button-small: $p-m !default;
+
+// $sz-atom-button: $p-base*5 !default;
+// $fz-atom-button: $fz-m !default;
+// $icon-sz-atom-button: $sz-icon-s !default;
+// $icon-m-atom-button: $m-m !default;
+// $p-atom-button: $p-l !default;
+
+// $sz-atom-button-large: $p-base*6 !default;
+// $fz-atom-button-large: $fz-m !default;
+// $icon-sz-atom-button-large: $sz-icon-m !default;
+// $icon-m-atom-button-large: $m-m !default;
+// $p-atom-button-large: $p-l !default;
+
 $sz-atom-button-small: $p-base*4;
 $fz-atom-button-small: $fz-xxs;
 $icon-sz-atom-button-small: $sz-icon-s;
