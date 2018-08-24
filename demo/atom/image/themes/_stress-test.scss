@@ -1,0 +1,15 @@
+
+@import '../../../../themes/motos';
+@import '~@schibstedspain/sui-theme/lib/index';
+
+// $bgc-atom-image: $c-gray-light !default;
+// $trsdu-atom-image: 1s !default;
+
+// $bgs-atom-image-placeholder: cover !default;
+// $bgs-atom-image-skeleton: 30% !default;
+
+$trsdu-atom-image: 3s !default;
+
+$bgs-atom-image-skeleton: cover !default;
+
+@import '../../../../components/atom/image/src/index.scss';
