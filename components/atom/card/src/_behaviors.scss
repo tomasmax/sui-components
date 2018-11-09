@@ -1,0 +1,19 @@
+@import '~@schibstedspain/sui-theme/lib/index';
+
+.sui-AtomCard {
+  &-media {
+    --sui-atom-card-w: 33%;
+  }
+
+  &--vertical {
+    --sui-atom-card-fxd: column;
+
+    div[class$='-media'] {
+      --sui-atom-card-w: 100%;
+    }
+  }
+
+  &.is-highlighted {
+    --sui-atom-card-bg: #{$c-highlight};
+  }
+}

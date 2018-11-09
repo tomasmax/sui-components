@@ -1,13 +1,12 @@
-@import '~@schibstedspain/sui-theme/lib/index';
-
-$c-atom-card-highlight: $c-highlight !default;
-$w-atom-card-media: 33% !default;
+@import './behaviors';
 
 .sui-AtomCard {
+  background: var(--sui-atom-card-bg);
   display: flex;
+  flex-direction: var(--sui-atom-card-fd);
 
   &-media {
-    width: $w-atom-card-media;
+    width: var(--sui-atom-card-w);
   }
 
   &-info {
@@ -19,18 +18,4 @@ $w-atom-card-media: 33% !default;
     cursor: pointer;
     text-decoration: none;
   }
-
-  &--highlight {
-    background: $c-atom-card-highlight;
-  }
-
-  &--vertical {
-    flex-direction: column;
-
-    .sui-AtomCard-media {
-      width: 100%;
-    }
-
-  }
-
 }

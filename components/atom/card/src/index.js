@@ -7,7 +7,7 @@ const CLASS_MEDIA = `${BASE_CLASS}-media`
 const CLASS_INFO = `${BASE_CLASS}-info`
 
 const CLASS_VERTICAL = `${BASE_CLASS}--vertical`
-const CLASS_HIGHLIGHT = `${BASE_CLASS}--highlight`
+const CLASS_HIGHLIGHT = `is-highlighted`
 const CLASS_LINK = `${BASE_CLASS}-link`
 
 class AtomCard extends Component {
