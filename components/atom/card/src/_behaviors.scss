@@ -8,7 +8,7 @@
   &--vertical {
     --sui-atom-card-fxd: column;
 
-    div[class$='-media'] {
+    [class$='-media'] {
       --sui-atom-card-w: 100%;
     }
   }
